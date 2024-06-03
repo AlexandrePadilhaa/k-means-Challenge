@@ -35,7 +35,7 @@ Implement a class KMeansCluster that performs K-Means clustering on a dataset. T
 
 ### Dataset for Testing
 
-*	Small JSON dataset example:
+*	Small dataset example:
 ```json filename=small_dataset.json
   [
     [1.0, 2.0],
@@ -48,6 +48,18 @@ Implement a class KMeansCluster that performs K-Means clustering on a dataset. T
     [10.0, 2.0],
     [9.0, 3.0]
   ]
+```
+
+* Expected result for this dataset:
+```json
+{
+    "centroids": [
+        [9.0, 2.33333333],
+        [1.16666667, 1.46666667],
+        [7.33333333, 9.0]
+    ],
+    "labels": [1, 1, 2, 2, 1, 2, 0, 0, 0]
+}
 ```
 
 ## Instructions for Students
