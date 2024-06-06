@@ -14,10 +14,10 @@ def create_dataset(filename: str, num_points: int):
 
 def main():
     #Criação de datasets para testes
-    create_dataset("dados_100000.json", 100000)
+    #create_dataset("dados_1000.json", 1000)
 
     if len(sys.argv) != 4:
-        print("Estrutura: python k-means.py input_file k output_file") #ex: python  k-means.py dados_100000.json 100 output.json
+        print("Estrutura: python k-means.py input_file k output_file") #ex: python k-means.py dados_1000.json 10 output.json
         sys.exit(1)
 
     input_file = sys.argv[1]
@@ -27,8 +27,8 @@ def main():
     print("Arquivo de entrada: ",input_file," K: ",k," Arquivo de saida: ", output_file)
 
     try:
-        kmeans = KMeansCluster(input_file, k)
-        kmeans.run(output_file)
+        kmeans = KMeansCluster(input_file, k) # criação do objeto
+        kmeans.run(output_file) # chamada do metodo que executa a solução
         print(f"Resultados salvos em {output_file}")
     except ValueError as e:
         print(f"Erro: {e}")
